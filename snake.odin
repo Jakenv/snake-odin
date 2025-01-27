@@ -52,7 +52,8 @@ main :: proc() {
     rl.SetTargetFPS(60)
 
     for !rl.WindowShouldClose() {
-        update_frame()
+        update_game()
+        draw_game()
     }
 }
 
@@ -128,8 +129,8 @@ update_game :: proc() {
                 }
             }
 
-            if snake[0].position.x > SCREEN_WIDTH - offset.x ||
-                snake[0].position.y > SCREEN_HEIGHT - offset.y ||
+            if snake[0].position.x > SCREEN_WIDTH - 1 ||
+                snake[0].position.y > SCREEN_HEIGHT - 1 ||
                 snake[0].position.x < 0 || snake[0].position.y < 0 {
                     game_over = true
                 }
@@ -213,7 +214,3 @@ draw_game :: proc() {
     }
 }
 
-update_frame :: proc() {
-    update_game()
-    draw_game()
-}
