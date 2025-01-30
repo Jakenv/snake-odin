@@ -2,7 +2,7 @@
 
 Just like in title
 
-To comple
+To compile
 ``` makefile
 make all
 ```
