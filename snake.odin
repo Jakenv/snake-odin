@@ -19,10 +19,7 @@ frame_counter := 0
 
 allow_move := false
 
-Vector2 :: struct {
-    x: f32,
-    y: f32,
-}
+Vector2 :: [2]f32
 
 Snake :: struct {
     speed: Vector2,
